@@ -8,7 +8,8 @@ function Comments() {
                         <div className="comments--name"></div>
                         <div className="comments--date"></div>
                     </div>
-                    <div className="comment--content"></div>
+                    <div className="comment--content">
+                    </div>
                 </div>
             </div>
         </>

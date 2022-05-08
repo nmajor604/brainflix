@@ -1,18 +1,23 @@
-import Video from "./Video";
+import React from "react";
+import data from "../data/video-details.json";
 
 function VideoList() {
-    return (
-      <>
-        <div className="next-videos">
-          <div>
-            Next Videos
+  return (
+    <>
+      <div>
+      {data.map((data, key) => {
+        return (
+          <div key={key}>
+            comment={data.comments}
+            channel={data.channel}
           </div>
-          <Video />
-        </div>
-      </>
-      
-    );
-  }
+        );
+        })}
+    </div>
+    </>
+    
+  );
+};
+  
   
   export default VideoList;
-  

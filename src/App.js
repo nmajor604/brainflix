@@ -1,19 +1,22 @@
-// import logo from './logo.svg';
-// import './App.css';
+import './App.scss';
 import Header from './components/Header';
 import VideoList from './components/VideoList';
 import Comments from './components/Comments';
-import CurrentVideo from './components/Main';
+import CurrentVideo from './components/CurrentVideo';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <CurrentVideo />
-      <Comments />
-      <VideoList />
-    </div>
-  );
+class App extends React.Component {
+  render () {
+    return (
+      <div className="App">
+        <Header />
+        <CurrentVideo />
+        <Comments />
+        <VideoList />
+      </div>
+    );
+  }
+  
 }
 
 export default App;
