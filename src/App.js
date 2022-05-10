@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,6 +21,25 @@ function App() {
       </header>
     </div>
   );
+=======
+import './App.scss';
+import Header from './components/Header';
+import VideoList from './components/VideoList';
+import Main from './components/Main';
+import React from 'react';
+
+class App extends React.Component {
+  render () {
+    return (
+      <div className="App">
+        <Header />
+        <Main />
+        <VideoList />
+      </div>
+    );
+  }
+  
+>>>>>>> Stashed changes
 }
 
 export default App;
