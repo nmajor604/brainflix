@@ -4,20 +4,16 @@ import CommentsList from './CommentsList';
 import React from 'react';
 
 
-class Main extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-    render() {
+function Main (props) {
+    
       return (
           <>
-            <CurrentVideo />
+            <CurrentVideo poster={props.data.image}/>
             {/* <CommentsForm /> */}
-            <CommentsList />
+            <CommentsList comments={props.data.comments}/>
           </>
       );
     }
-  }
+  
 
   export default Main;

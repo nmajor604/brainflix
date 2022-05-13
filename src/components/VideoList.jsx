@@ -1,10 +1,10 @@
-import data from '../data/video-details.json';
+// import data from '../data/video-details.json';
 
-function VideoList () {
+function VideoList (props) {
     return (
         <div>
             <ul>
-            {data.map((data, index) => <div key={index}>
+            {props.data.map((data, index) => <div key={index}>
                  <img src={data.image} alt="" width="100px" /> 
                  {data.channel}  
                  {data.title}

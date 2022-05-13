@@ -1,12 +1,12 @@
-import data from '../data/video-details.json';
-const comment = data[0].comments; 
+// import data from '../data/video-details.json';
+// const comment = data[0].comments; 
 
 
 
-function CommentsList () {
+function CommentsList (props) {
     return (
         <div>
-            {comment.map((comment, index) => <div key={index}>
+            {props.comments.map((comment, index) => <div key={index}>
                  
                  <p>{comment.name}</p>  
                  <p>{comment.comment}</p>
