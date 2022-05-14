@@ -1,12 +1,17 @@
-// import data from '../data/video-details.json';
-
 function VideoList (props) {
     return (
         <div>
             <ul>
             {props.data.map((data, index) => <div key={index}>
-                 <img src={data.image} alt="" width="100px" /> 
-                 {data.channel}  
+                 <video 
+                    src={data.image} 
+                    alt="" 
+                    width="100px" 
+                    poster={data.image}
+                    onClick={() => props.changeVideoHandler(index)}
+                 >
+                 </video>
+                 {data.channel} 
                  {data.title}
                 </div>)}
             </ul>

@@ -1,8 +1,3 @@
-// import data from '../data/video-details.json';
-// const comment = data[0].comments; 
-
-
-
 function CommentsList (props) {
     return (
         <div>
