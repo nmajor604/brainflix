@@ -1,24 +1,23 @@
 import React from 'react';
+import eyeball from '../assets/icons/views.svg';
+import heart from '../assets/icons/likes.svg';
 
 function CurrentVideoStats(props) {
       return (
-          <>
+          <div className='videostats'>
             <div className="currentvideo--author">
                 By {props.channel}
             </div>
             <div className="currentvideo--date">
-              date
               {props.date}
             </div>
             <div className="currentvideo--views">
-                {props.views}
-                views
+                <img src={eyeball} alt="Views Icon" />{props.views}
             </div>
             <div className="currentvideo--likes">
-              {props.likes}
-              likes
+                <img src={heart} alt="Heart Icon" />{props.likes}
             </div>
-          </>
+          </div>
       );
     }
   

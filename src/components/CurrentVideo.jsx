@@ -5,8 +5,9 @@ function CurrentVideo(props) {
     console.log('Current Video Props', props);
     return (
         <div className='currentvideo'>
-            <video width='300' height='240' poster={props.data.image}>
+            <video width='100%' height='240' controls poster={props.data.image}>
             </video>
+            <h1>{props.data.title}</h1>
             <CurrentVideoStats 
                 channel={props.data.channel}
                 date={props.data.timestamp}
@@ -14,7 +15,6 @@ function CurrentVideo(props) {
                 likes={props.data.likes}
             />
             <CurrentVideoInfo 
-                title={props.data.title}
                 description={props.data.description}
              />
         </div>

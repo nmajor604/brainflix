@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .searchbar {
+    background-color: #E1E1E1;
+  }
+
+  .header--button {
+      background-color: #0095FF;
+  }
+  
+  .header--searchbar {
+      display: flex;
+      flex-direction: row;
+  }

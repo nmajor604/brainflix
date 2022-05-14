@@ -1,18 +1,26 @@
+
+
 function VideoList (props) {
     return (
         <div>
-            <ul>
-            {props.data.map((data, index) => <div key={index}>
+            <h4>NEXT VIDEOS</h4>
+            <ul >
+            {props.data.filter((current) => props.currentVideoId !== current.id).map((data) => <div className="videolist" key={data.id}>
+                
                  <video 
                     src={data.image} 
                     alt="" 
                     width="100px" 
                     poster={data.image}
-                    onClick={() => props.changeVideoHandler(index)}
+                    onClick={() => props.changeVideoHandler(data.id)}
+                    
                  >
                  </video>
-                 {data.channel} 
-                 {data.title}
+                 <div>
+                    <div>{data.channel} </div>
+                    <div>{data.title}</div>
+                 </div>
+                 
                 </div>)}
             </ul>
         </div>
