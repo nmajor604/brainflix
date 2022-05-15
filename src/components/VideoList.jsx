@@ -3,7 +3,7 @@ import './VideoList.scss';
 function VideoList (props) {
     return (
         <div>
-            <h4>NEXT VIDEOS</h4>
+            <div className='videolist__header'>NEXT VIDEOS</div>
             <ul className="video--list">
             {props.data.filter((current) => props.currentVideoId !== current.id).map((data) => <div className="videolist" key={data.id}>
                 
@@ -17,9 +17,9 @@ function VideoList (props) {
                     
                  >
                  </video>
-                 <div>
-                    <div>{data.channel} </div>
-                    <div>{data.title}</div>
+                 <div className='video__info'>
+                    <div className='video__info--title'>{data.title}</div>
+                    <div className='video__info--channel'>{data.channel} </div>
                  </div>
                  
                 </div>)}

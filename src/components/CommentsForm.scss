@@ -1,12 +1,32 @@
-.comments--section {
+@import 'fonts';
+
+$regular: 'Avenir Next Regular'; 
+$bold: 'Avenir Next Bold';
+$demi: 'Avenir Next Demi';
+
+
+.comments__section {
     margin-top: 24px;
+    padding: 16px;
+    border-bottom: solid 1px #e1e1e1;
+
+    &--header {
+      font-family: $demi;
+    }
 }
-
-
 
 .comments__input {
     display: flex;
     flex-direction: row;
+
+    &--form {
+      font-family: $demi;
+      color: #AFAFAF;
+    }
+  }
+
+  .comments__input > div {
+    padding: 8px;
   }
   
   .comments__list {
@@ -30,6 +50,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
+      padding: 8px;
       background-color: #0095FF;
       color: white;
+      font-family: $demi;
+      border-radius: 4px;
   }

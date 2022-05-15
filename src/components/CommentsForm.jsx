@@ -4,21 +4,22 @@ import './CommentsForm.scss'
 
 function CommentsForm() {
     return (
-        <div className='comments--section'>
-        <p>3 Comments</p>
-        <div class="comments__input">
-            <div class="comments__input--avatar">
-                <img class="avatar" src={avatar} alt="Mohan Muruge"></img>
+        <div className='comments__section'>
+        <div className='comments__section--header'>3 Comments</div>
+        <div className="comments__input">
+            <div className="comments__input--avatar">
+                <img className="avatar" src={avatar} alt="Mohan Muruge"></img>
             </div>
-            <div id="comments__input--form">
-                <div class="section__header">
-                    Join the Conversation
+            <div className="comments__input--form">
+                <div className="section__header">
+                    JOIN THE CONVERSATION
                 </div>
                 <form id="comments__form">
                     <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Add a new comment"></textarea>
                     <div class="comment__button">
-                        <img src={addcomment} alt="Add Comment Icon" />
+                        <div><img src={addcomment} alt="Add Comment Icon" /></div>
                         <div>COMMENT</div>
+                        <div></div>
                     </div>
                 </form>
             </div>

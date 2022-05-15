@@ -5,7 +5,6 @@ $bold: 'Avenir Next Bold';
 $demi: 'Avenir Next Demi';
 
 
-
 .header {
     display: flex;
     flex-direction: column;
@@ -14,22 +13,38 @@ $demi: 'Avenir Next Demi';
     padding: 16px;
     margin-left: 16px;
     margin-right: 16px;
-  }
+    
+    &__logo {
+      height: 25px;
+      width: 120px;
+    }
 
-  .header--logo {
-    height: 25px;
-    width: 120px;
-  }
+    &__avatar {
+      height: 36px;
+      width: 36px;
+      background-color: #E1E1E1;
+      border-radius: 50%;
+    }
 
-  .header--avatar {
-    height: 36px;
-    width: 36px;
-    background-color: #E1E1E1;
-    border-radius: 50%;
-  }
+    &__searchbar {
+      width: 80vw;
+      display: flex;
+      flex-direction: row;
+      padding: 16px;
+    }
 
-  .header--searchbar {
-    width: 80vw;
+    &__button {
+      background-color: #0095FF;
+      height: 45px;
+      width: 100%;
+      border-radius: 4px;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      font-family: $demi;
+    }
   }
 
   .searchbox {
@@ -40,22 +55,17 @@ $demi: 'Avenir Next Demi';
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: $regular;
   }
 
-  .header--button {
-      background-color: #0095FF;
-      height: 45px;
-      width: 100%;
-      border-radius: 4px;
-      color: white;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding-right: 20px;
-      font-family: $regular;
+  .searchbox > div {
+    padding: 8px;
   }
-  
-  .header--searchbar {
+
+  @media only screen and (min-width: 768px) {
+    .header {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+    }
   }

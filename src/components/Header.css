@@ -16,20 +16,49 @@
   margin-right: 16px;
 }
 
-.header--logo {
+.header__logo {
   height: 25px;
   width: 120px;
 }
 
-.header--avatar {
+.header__avatar {
   height: 36px;
   width: 36px;
   background-color: #E1E1E1;
   border-radius: 50%;
 }
 
-.header--searchbar {
+.header__searchbar {
   width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 16px;
+}
+
+.header__button {
+  background-color: #0095FF;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Avenir Next Demi";
 }
 
 .searchbox {
@@ -47,35 +76,25 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header--button {
-  background-color: #0095FF;
-  height: 45px;
-  width: 100%;
-  border-radius: 4px;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 20px;
   font-family: "Avenir Next Regular";
 }
 
-.header--searchbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.searchbox > div {
+  padding: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

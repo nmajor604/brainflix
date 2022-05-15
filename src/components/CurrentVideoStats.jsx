@@ -12,19 +12,18 @@ function CurrentVideoStats(props) {
   const dateString = (Day + 1) + '/' + (Month + 1) + '/' + Year;
 
       return (
-          
           <div className='videostats'>
             <div className='videostats--upper'>
               <div className="currentvideo--author">
                   By {props.channel}
               </div>
-              <div className="currentvideo--date">
-                {dateString}
+              <div className="currentvideo--views">
+                  <img src={eyeball} alt="Views Icon" />{props.views}
               </div>
             </div>
             <div className='videostats--lower'>
-              <div className="currentvideo--views">
-                  <img src={eyeball} alt="Views Icon" />{props.views}
+              <div className="currentvideo--date">
+                {dateString}
               </div>
               <div className="currentvideo--likes">
                   <img src={heart} alt="Heart Icon" />{props.likes}

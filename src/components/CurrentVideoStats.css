@@ -1,7 +1,6 @@
 @import url(/Users/nickm/Desktop/brainstation/nick-major-brainflix/src/components/_fonts.css);
 .videostats {
   margin-top: 16px;
-  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,5 +9,19 @@
       -ms-flex-direction: row;
           flex-direction: row;
   font-family: "Avenir Next Demi";
+}
+
+.videostats--upper, .videostats--lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
 }
 /*# sourceMappingURL=CurrentVideoStats.css.map */

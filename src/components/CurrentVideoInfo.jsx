@@ -1,5 +1,5 @@
-// import data from "../data/video-details.json";
 import React from "react";
+import './CurrentVideoInfo.scss';
 
 function CurrentVideoInfo(props) {
       return (

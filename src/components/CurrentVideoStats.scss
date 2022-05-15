@@ -7,8 +7,13 @@ $demi: 'Avenir Next Demi';
 
 .videostats {
     margin-top: 16px;
-    padding: 16px;
     display: flex;
     flex-direction: row;
     font-family: $demi;
+     &--upper, &--lower {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         padding: 16px;
+     }
 }
