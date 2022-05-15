@@ -1,0 +1,35 @@
+.comments--section {
+    margin-top: 24px;
+}
+
+
+
+.comments__input {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .comments__list {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .comments__title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+  }
+
+  .comment__button {
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #0095FF;
+      color: white;
+  }

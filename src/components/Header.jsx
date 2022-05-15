@@ -7,19 +7,20 @@ import './Header.scss';
 function Header() {
     return (
         <div className='header'>
-            <div className='header--logo'>
-                <img src={logo} alt="Brainflix Logo" />
-            </div>
+            <img className='header--logo' src={logo} alt="Brainflix Logo" />
             <div className='header--searchbar'>
-                <div className='searchbar'>
-                    <img src={searchbox} alt='Video Search Box'/>Search
+                <div className='searchbox'>
+                    <img src={searchbox} alt='Video Search Box'/>
+                    <div>Search</div>
                 </div>
-                <img src={avatar} alt='Mohan Muruge Avatar' width='100px' />
+                <img className='header--avatar' src={avatar} alt='Mohan Muruge Avatar' />
             </div>
-            <div >
-                <button className='header--button'><img src={upload} alt='Video Upload Button' width='100px'/>UPLOAD
-                </button>
+            
+            <div className='header--button'>
+                <img src={upload} alt='Video Upload Icon'/>
+                <div>UPLOAD</div>
             </div>
+            
         </div>
     );
 }

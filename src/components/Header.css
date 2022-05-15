@@ -9,15 +9,62 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: auto;
+  padding: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
-.searchbar {
+.header--logo {
+  height: 25px;
+  width: 120px;
+}
+
+.header--avatar {
+  height: 36px;
+  width: 36px;
   background-color: #E1E1E1;
+  border-radius: 50%;
+}
+
+.header--searchbar {
+  width: 80vw;
+}
+
+.searchbox {
+  background-color: #E1E1E1;
+  width: 100%;
+  border: solid 1px #AFAFAF;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header--button {
   background-color: #0095FF;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 20px;
 }
 
 .header--searchbar {
