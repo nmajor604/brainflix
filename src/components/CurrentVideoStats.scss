@@ -8,12 +8,21 @@ $demi: 'Avenir Next Demi';
 .videostats {
     margin-top: 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: $demi;
      &--upper, &--lower {
          display: flex;
          flex-direction: row;
-         justify-content: space-between;
-         padding: 16px;
+         justify-content: space-around;
+         padding: 8px;
      }
+}
+
+@media only screen and (min-width: 768px) {
+    .videostats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
 }

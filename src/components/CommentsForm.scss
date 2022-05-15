@@ -25,35 +25,44 @@ $demi: 'Avenir Next Demi';
     }
   }
 
-  .comments__input > div {
+.comments__input--avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+.comments__input > div {
+  padding: 8px;
+}
+
+.comment__input--form--button {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 8px;
-  }
-  
-  .comments__list {
+    background-color: #0095FF;
+    color: white;
+    font-family: $demi;
+    border-radius: 4px;
+}
+
+#comment {
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+}
+  #comment__form {
     display: flex;
-    flex-direction: row;
-  }
-  
-  .comments__title {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-  }
-
-  .comment__button {
-      height: 40px;
+  @media only screen and (min-width: 768px) {
+    .comments__input {
       display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: space-between;
-      padding: 8px;
-      background-color: #0095FF;
-      color: white;
-      font-family: $demi;
-      border-radius: 4px;
+    }
   }

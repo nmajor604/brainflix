@@ -7,22 +7,25 @@ function CommentsForm() {
         <div className='comments__section'>
         <div className='comments__section--header'>3 Comments</div>
         <div className="comments__input">
-            <div className="comments__input--avatar">
-                <img className="avatar" src={avatar} alt="Mohan Muruge"></img>
+            <div className="comments__input--avatar" >
+                <img className="comments__input--avatar" src={avatar} alt="Mohan Muruge"></img>
             </div>
             <div className="comments__input--form">
-                <div className="section__header">
-                    JOIN THE CONVERSATION
-                </div>
                 <form id="comments__form">
-                    <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Add a new comment"></textarea>
-                    <div class="comment__button">
+                    <div>
+                        <div className="section__header">
+                            JOIN THE CONVERSATION
+                        </div>
+                        <input name="comment" id="comment" placeholder="Add a new comment"></input>
+                    </div>
+                </form>
+                <div class="comment__input--form--button">
                         <div><img src={addcomment} alt="Add Comment Icon" /></div>
                         <div>COMMENT</div>
                         <div></div>
-                    </div>
-                </form>
+                </div>
             </div>
+            
         </div>
         </div>
     );

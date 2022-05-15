@@ -16,7 +16,7 @@ function CommentsList (props) {
         <div>
             {props.comments.map((comment, index) => <div key={index}>
                  <div className='comments__list'>
-                    <img className='comments__list--avatar' src={avatar} alt="User Avatar"/>
+                    <div className='comments__list--avatar' alt="User Avatar"></div>
                     <div>
                         <div className='comments__list--title'>
                             <div className='comments__list--name'>{comment.name}</div>  
