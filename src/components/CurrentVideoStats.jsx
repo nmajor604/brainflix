@@ -4,6 +4,13 @@ import heart from '../assets/icons/likes.svg';
 import './CurrentVideoStats.scss';
 
 function CurrentVideoStats(props) {
+
+  const formattedDate = new Date(props.date);
+  const Day = formattedDate.getDate();
+  const Month = formattedDate.getMonth();
+  const Year = formattedDate.getFullYear();
+  const dateString = (Day + 1) + '/' + (Month + 1) + '/' + Year;
+
       return (
           
           <div className='videostats'>
@@ -12,7 +19,7 @@ function CurrentVideoStats(props) {
                   By {props.channel}
               </div>
               <div className="currentvideo--date">
-                {props.date}
+                {dateString}
               </div>
             </div>
             <div className='videostats--lower'>

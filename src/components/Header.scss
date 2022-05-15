@@ -1,3 +1,11 @@
+@import "fonts";
+
+$regular: 'Avenir Next Regular'; 
+$bold: 'Avenir Next Bold';
+$demi: 'Avenir Next Demi';
+
+
+
 .header {
     display: flex;
     flex-direction: column;
@@ -44,6 +52,7 @@
       flex-direction: row;
       align-items: center;
       padding-right: 20px;
+      font-family: $regular;
   }
   
   .header--searchbar {

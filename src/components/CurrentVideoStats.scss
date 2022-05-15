@@ -1,6 +1,14 @@
+@import "_fonts.css";
+
+$regular: 'Avenir Next Regular'; 
+$bold: 'Avenir Next Bold';
+$demi: 'Avenir Next Demi';
+
+
 .videostats {
     margin-top: 16px;
     padding: 16px;
     display: flex;
     flex-direction: row;
+    font-family: $demi;
 }

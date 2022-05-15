@@ -1,3 +1,4 @@
+@import url(/Users/nickm/Desktop/brainstation/nick-major-brainflix/src/components/_fonts.css);
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,6 +66,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-right: 20px;
+  font-family: "Avenir Next Regular";
 }
 
 .header--searchbar {
