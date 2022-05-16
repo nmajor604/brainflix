@@ -26,12 +26,19 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main data={this.state.data}/>
-        <VideoList 
-          data={this.state.videos} 
-          currentVideoId={this.state.data.id}
-          changeVideoHandler={this.changeVideoHandler}
-        />
+        <div className='desktop'>
+          <div>
+            <Main data={this.state.data}/>
+          </div>
+          <div>
+            <VideoList 
+              data={this.state.videos} 
+              currentVideoId={this.state.data.id}
+              changeVideoHandler={this.changeVideoHandler}
+            />
+          </div>
+        </div>
+        
       </>
     );
   }
