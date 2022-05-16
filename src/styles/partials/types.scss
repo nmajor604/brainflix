@@ -1,0 +1,7 @@
+@import url('../../components/_fonts.css');
+
+@mixin pageheader {
+    font-family: 60px;
+    line-height: 68px;
+    font-family: $regular;
+}
