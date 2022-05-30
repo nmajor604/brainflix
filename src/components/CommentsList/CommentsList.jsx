@@ -1,4 +1,3 @@
-import avatar from '../assets/images/Mohan-muruge.jpg';
 import './CommentsList.scss';
 
 function convertTimestamp(timestamp){

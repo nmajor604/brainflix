@@ -1,5 +1,5 @@
-import CurrentVideoInfo from './CurrentVideoInfo';
-import CurrentVideoStats from './CurrentVideoStats';
+import CurrentVideoInfo from '../../CurrentVideoInfo/CurrentVideoInfo';
+import CurrentVideoStats from '../../CurrentVideoStats/CurrentVideoStats';
 import './CurrentVideo.scss'
 
 function CurrentVideo(props) {

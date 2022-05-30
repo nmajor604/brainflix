@@ -1,5 +1,5 @@
-import avatar from '../assets/images/Mohan-muruge.jpg';
-import addcomment from '../assets/icons/add_comment.svg';
+import avatar from '../../assets/images/Mohan-muruge.jpg';
+import addcomment from '../../assets/icons/add_comment.svg';
 import './CommentsForm.scss'
 
 function CommentsForm() {

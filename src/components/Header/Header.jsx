@@ -1,15 +1,17 @@
-import logo from '../assets/logo/BrainFlix-logo.svg';
-import avatar from '../assets/images/Mohan-muruge.jpg';
-import searchbox from '../assets/icons/search.svg';
-import upload from '../assets/icons/upload.svg';
+import logo from '../../assets/logo/BrainFlix-logo.svg';
+import avatar from '../../assets/images/Mohan-muruge.jpg';
+import searchbox from '../../assets/icons/search.svg';
+import upload from '../../assets/icons/upload.svg';
 import './Header.scss';
-import '../App.scss';
+import '../../App.scss';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <div className='header'>
             <div>
-                <img className='header__logo' src={logo} alt="Brainflix Logo" />
+            <Link to="/"><img className='header__logo' src={logo} alt="Brainflix Logo"/>
+            </Link>
             </div>
             <div className='header__searchbar'>
                 <div className='searchbox'>

@@ -1,6 +1,6 @@
-import CurrentVideo from './CurrentVideo';
-import CommentsForm from './CommentsForm';
-import CommentsList from './CommentsList';
+import CurrentVideo from './CurrentVideo/CurrentVideo';
+import CommentsForm from './CommentsForm/CommentsForm';
+import CommentsList from './CommentsList/CommentsList';
 import React from 'react';
 
 
