@@ -1,0 +1,10 @@
+$regular: 'Avenir Next Regular'; 
+$bold: 'Avenir Next Bold';
+$demi: 'Avenir Next Demi';
+
+
+.video--title, .video--description {
+    font-family: $regular;
+    font-size: 14px;
+    line-height: 24px;
+}
