@@ -24,6 +24,13 @@ componentDidMount() {
     })
 }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.propValue !==
+      this.props.propValue) {
+        
+      }
+  }
+
   changeVideoHandler = (id) => {
 
     const currentVideo = data.find((video) => video.id === id)
