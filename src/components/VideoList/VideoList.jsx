@@ -5,9 +5,9 @@ function VideoList (props) {
         <div>
             <div className='videolist__header'>NEXT VIDEOS</div>
             <ul className="video--list">
-            {props.data.filter((current) => props.currentVideoId !== current.id).map((data) => <div className="videolist" key={data.id}>
+            {props.data.filter((current) => props.currentVideoId !== current.id).map((data) => <li className="videolist" key={data.id}>
                 
-                 <video 
+                 <img 
                     className="video--thumbnail"
                     src={data.image} 
                     alt="Video Thumbnail" 
@@ -16,13 +16,13 @@ function VideoList (props) {
                     onClick={() => props.changeVideoHandler(data.id)}
                     
                  >
-                 </video>
+                 </img>
                  <div className='video__info'>
                     <div className='video__info--title'>{data.title}</div>
                     <div className='video__info--channel'>{data.channel} </div>
                  </div>
                  
-                </div>)}
+                </li>)}
             </ul>
         </div>
         );

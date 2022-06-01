@@ -5,6 +5,7 @@ import data from './data/video-details.json';
 import videos from './data/videos.json';
 import React from 'react';
 import axios from 'axios';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -39,22 +40,18 @@ componentDidMount() {
   
   render() {
     return (
-      <>
+      <BrowserRouter>
         <Header />
-        <div className='desktop'>
-          <div>
-            <Main data={this.state.data}/>
-          </div>
-          <div>
-            <VideoList 
-              data={this.state.videos} 
-              currentVideoId={this.state.data.id}
-              changeVideoHandler={this.changeVideoHandler}
-            />
-          </div>
-        </div>
+
+        <Switch>
+          <Route path='/' exact component={Main} />
+          <Route path='/upload' component={VideoUpload} />
+          <Route path='/videos/:id' component={Main} />
+        </Switch>
+      
+      </BrowserRouter>
+      
         
-      </>
     );
   }
 }
