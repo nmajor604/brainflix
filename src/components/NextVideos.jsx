@@ -15,12 +15,6 @@ function NextVideos() {
             </div>
           </div>
         </div>
-        
-      
-      
-      
-      
-      
       </>
       
     );

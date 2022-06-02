@@ -21,15 +21,18 @@ componentDidMount() {
   axios.get(`https://project-2-api.herokuapp.com?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b`)
     .then(res => {
       const data = res.data;
-      this.setState({ videos });
+      this.setState({ data: data });
     })
 }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.propValue !==
-      this.props.propValue) {
-        
-      }
+    if (prevProps.id !== this.props.id) {
+      axios.get(`https://project-2-api.herokuapp.com?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b`)
+      .then(res => {
+      const data = res.data;
+      this.setState({ data: data });
+    });
+    }
   }
 
   changeVideoHandler = (id) => {
