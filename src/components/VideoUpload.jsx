@@ -1,4 +1,4 @@
-import Header from './components/Header';
+import Header from './Header/Header.jsx';
 import publish from '../assets/icons/publish.svg';
 
 function VideoUpload() {

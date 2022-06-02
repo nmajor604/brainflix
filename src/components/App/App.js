@@ -1,8 +1,5 @@
-import Header from './components/Header/Header.jsx';
-import Main from './components/Main';
-import VideoList from './components/VideoList/VideoList';
-import data from './data/video-details.json';
-import videos from './data/videos.json';
+import Header from '../Header/Header.jsx';
+import Main from '../Main';
 import React from 'react';
 import axios from 'axios';
 import { BrowserRouter, Route } from 'react-router-dom';

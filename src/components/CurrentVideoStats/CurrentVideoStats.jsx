@@ -1,6 +1,6 @@
 import React from 'react';
-import eyeball from '../assets/icons/views.svg';
-import heart from '../assets/icons/likes.svg';
+import eyeball from '../../assets/icons/views.svg';
+import heart from '../../assets/icons/likes.svg';
 import './CurrentVideoStats.scss';
 
 function CurrentVideoStats(props) {
