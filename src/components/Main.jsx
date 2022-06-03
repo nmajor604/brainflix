@@ -18,21 +18,28 @@ class Main extends React.Component {
 
 
 componentDidMount() {
-axios.get(`https://project-2-api.herokuapp.com?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/:id`)
+axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b`)
   .then(res => {
-    const data = res.data;
-    this.setState({ data: data });
+    console.log(res);
+    this.setState({ videos: res.data });
   })
+
+    axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+    .then(res => {
+    const data = res.data;
+    console.log('main video first', data);
+    this.setState({ data: data });
+  });
 }
 
 componentDidUpdate(prevProps) {
-  if (match.params.id !== this.props.id) {
-    axios.get(`https://project-2-api.herokuapp.com?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/:id`)
-    .then(res => {
-    const data = res.data;
-    this.setState({ data: data });
-  });
-  }
+  // if (match.params.id !== this.props.id) {
+  //   axios.get(`https://project-2-api.herokuapp.com/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+  //   .then(res => {
+  //   const data = res.data;
+  //   this.setState({ data: data });
+  // });
+  // }
 }
 
   render () {
@@ -40,10 +47,10 @@ componentDidUpdate(prevProps) {
   
     return (
       <>
-        <CurrentVideo data={props.data}/>
-        <CommentsForm />
-        <CommentsList comments={props.data.comments}/>
-        <VideoList />
+        {/* <CurrentVideo data={props.data}/> */}
+        {/* <CommentsForm /> */}
+        {/* <CommentsList comments={props.data.comments}/> */}
+        {/* <VideoList /> */}
       </>
   );
 
