@@ -14,7 +14,6 @@ function VideoList (props) {
                     alt="Video Thumbnail" 
                     width="100px" 
                     poster={videos.image}
-                    onClick={() => props.changeVideoHandler(videos.id)}
                     
                  >
                  </img>

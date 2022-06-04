@@ -30,10 +30,10 @@ axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050
   });
 }
 
-componentDidUpdate(prevProps, prevState) {
+componentDidUpdate = (prevProps, prevState) => {
   console.log(this.props.match.params);
-  if (props.match.params.id !== this.props.id) {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+  if (this.props.match.params.id !== prevProps.match.params.id) {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
     .then(res => {
     const data = res.data;
     this.setState({ data: data });
@@ -55,7 +55,8 @@ VideoComment =  <CommentsList comments={this.state.data.comments}/>
           <CommentsForm />
           {VideoComment}
           {/* <CommentsList comments={this.state.data.comments}/> */}
-          <VideoList videos={this.state.videos}/>
+          <VideoList videos={this.state.videos}
+          currentVideoId={this.state.data.id}/>
         </>
       );
       }
