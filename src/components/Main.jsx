@@ -30,9 +30,10 @@ axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050
   });
 }
 
-componentDidUpdate(prevProps, id, match) {
-  if (match.params.id !== this.props.id) {
-    axios.get(`https://project-2-api.herokuapp.com/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+componentDidUpdate(prevProps, prevState) {
+  console.log(this.props.match.params);
+  if (props.match.params.id !== this.props.id) {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
     .then(res => {
     const data = res.data;
     this.setState({ data: data });
@@ -41,22 +42,23 @@ componentDidUpdate(prevProps, id, match) {
 }
 
   render () {
-
-  
-    return (
-      <>
-        <CurrentVideo data={this.props.data}/>
-        <CommentsForm />
-        <CommentsList comments={this.props.data}/>
-        <VideoList videos={this.props.videos}/>
-      </>
-  );
+console.log('this.state.data', this.state.data);
+let VideoComment = '';
+if (this.state.data.comments) {
+VideoComment =  <CommentsList comments={this.state.data.comments}/>
+}
 
 
-    }
-
-
-      
+      return (
+        <>
+          <CurrentVideo data={this.state.data}/>
+          <CommentsForm />
+          {VideoComment}
+          {/* <CommentsList comments={this.state.data.comments}/> */}
+          <VideoList videos={this.state.videos}/>
+        </>
+      );
+      }
     }
   
 

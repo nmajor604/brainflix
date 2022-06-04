@@ -11,6 +11,7 @@ function convertTimestamp(timestamp){
 
 
 function CommentsList (props) {
+    console.log('propss', props)
     return (
         <div>
             {props.comments.map((comment, index) => <div key={index}>
