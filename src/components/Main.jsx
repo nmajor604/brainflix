@@ -15,8 +15,6 @@ class Main extends React.Component {
   }
 }
 
-
-
 componentDidMount() {
 axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b`)
   .then(res => {
@@ -32,14 +30,14 @@ axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050
   });
 }
 
-componentDidUpdate(prevProps) {
-  // if (match.params.id !== this.props.id) {
-  //   axios.get(`https://project-2-api.herokuapp.com/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
-  //   .then(res => {
-  //   const data = res.data;
-  //   this.setState({ data: data });
-  // });
-  // }
+componentDidUpdate(prevProps, id, match) {
+  if (match.params.id !== this.props.id) {
+    axios.get(`https://project-2-api.herokuapp.com/${id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+    .then(res => {
+    const data = res.data;
+    this.setState({ data: data });
+  });
+  }
 }
 
   render () {
@@ -47,10 +45,10 @@ componentDidUpdate(prevProps) {
   
     return (
       <>
-        {/* <CurrentVideo data={props.data}/> */}
-        {/* <CommentsForm /> */}
-        {/* <CommentsList comments={props.data.comments}/> */}
-        {/* <VideoList /> */}
+        <CurrentVideo data={this.props.data}/>
+        <CommentsForm />
+        <CommentsList comments={this.props.data}/>
+        <VideoList videos={this.props.videos}/>
       </>
   );
 

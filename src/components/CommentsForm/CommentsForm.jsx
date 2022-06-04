@@ -19,7 +19,7 @@ function CommentsForm() {
                         <input name="comment" id="comment" placeholder="Add a new comment"></input>
                     </div>
                 </form>
-                <div class="comment__input--form--button">
+                <div className="comment__input--form--button">
                         <div><img src={addcomment} alt="Add Comment Icon" /></div>
                         <div>COMMENT</div>
                         <div></div>

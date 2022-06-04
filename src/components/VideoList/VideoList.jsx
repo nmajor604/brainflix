@@ -6,21 +6,21 @@ function VideoList (props) {
         <div>
             <div className='videolist__header'>NEXT VIDEOS</div>
             <ul className="video--list">
-            {props.data.filter((current) => props.currentVideoId !== current.id).map((data) => <li className="videolist" key={data.id}>
+            {props.videos.filter((current) => props.currentVideoId !== current.id).map((videos) => <li className="videolist" key={videos.id}>
                 <Link to='/videos/:id'>
                  <img 
                     className="video--thumbnail"
-                    src={data.image} 
+                    src={videos.image} 
                     alt="Video Thumbnail" 
                     width="100px" 
-                    poster={data.image}
-                    onClick={() => props.changeVideoHandler(data.id)}
+                    poster={videos.image}
+                    onClick={() => props.changeVideoHandler(videos.id)}
                     
                  >
                  </img>
                  <div className='video__info'>
-                    <div className='video__info--title'>{data.title}</div>
-                    <div className='video__info--channel'>{data.channel} </div>
+                    <div className='video__info--title'>{videos.title}</div>
+                    <div className='video__info--channel'>{videos.channel} </div>
                  </div>
                  </Link>
 
