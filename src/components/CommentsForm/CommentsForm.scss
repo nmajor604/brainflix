@@ -1,9 +1,6 @@
-// @import 'fonts';
-
 $regular: 'Avenir Next Regular'; 
 $bold: 'Avenir Next Bold';
 $demi: 'Avenir Next Demi';
-
 
 .comments__section {
     margin-top: 24px;
@@ -19,16 +16,17 @@ $demi: 'Avenir Next Demi';
     display: flex;
     flex-direction: row;
 
+    &--avatar {
+      width: 36px;
+      height: 36px;
+      padding: 8px;
+      border-radius: 50%;
+    }
+
     &--form {
       font-family: $demi;
       color: #AFAFAF;
     }
-  }
-
-.comments__input--avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
   }
 
 .comments__input > div {
@@ -54,15 +52,38 @@ $demi: 'Avenir Next Demi';
   height: 36px;
   border-radius: 4px;
 }
-  #comment__form {
+  
+#comment__form {
     display: flex;
     flex-direction: column;
-  }
+}
 
   @media only screen and (min-width: 768px) {
     .comments__input {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
+
+    .comments__form--tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .comments__form--tablet > div {
+      padding: 8px;
+    }
+
+    #comments__form {
+      width: 55vw;
+      padding: 8px;
+    }
+
+    .comment__input--form--button {
+      width: 25vw;
+    }
+
+    
   }

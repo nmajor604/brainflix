@@ -1,7 +1,7 @@
-import CurrentVideo from './CurrentVideo/CurrentVideo';
-import CommentsForm from './CommentsForm/CommentsForm';
-import CommentsList from './CommentsList/CommentsList';
-import VideoList from './VideoList/VideoList';
+import CurrentVideo from '../components/CurrentVideo/CurrentVideo';
+import CommentsForm from '../components/CommentsForm/CommentsForm';
+import CommentsList from '../components/CommentsList/CommentsList';
+import VideoList from '../components/VideoList/VideoList';
 import React from 'react';
 import axios from 'axios';
 

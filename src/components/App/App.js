@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
 import VideoUpload from '../VideoUpload/VideoUpload';
-import Main from '../Main';
+import Main from '../../Page/Main';
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 

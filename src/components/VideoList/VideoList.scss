@@ -8,17 +8,12 @@
 }
 @font-face {
   font-family: "Avenir Next Bold";
-  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
-
-  
-}/*# sourceMappingURL=fonts.css.map */
-
-
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf); 
+}
 
 $regular: 'Avenir Next Regular'; 
 $bold: 'Avenir Next Bold';
 $demi: 'Avenir Next Demi';
-
 
 .videolist__header {
   font-family: $regular;
@@ -26,18 +21,21 @@ $demi: 'Avenir Next Demi';
   padding: 16px;
 }
 
-.video--list {
+.videolist {
   list-style: none;
-
+    
+  &--container {
+      display: flex;
+      flex-direction: row;
+      padding: 8px;
+      text-decoration: none;
+    }
 }
 
-.videolist {
-    display: flex;
-    flex-direction: row;
-    padding: 8px;
-    text-decoration: none;
-
-  }
+.videolist > div {
+  padding: 8px;
+  
+}
 
 .video--thumbnail {
     border-radius: 4px;
@@ -47,13 +45,9 @@ $demi: 'Avenir Next Demi';
     height: 80px;
 }
 
-.videolist > div {
-  padding: 8px;
-  
-}
-
 .video__info {
   padding: 8px;
+  
   &--title {
     font-family: $demi;
     color: #000;
