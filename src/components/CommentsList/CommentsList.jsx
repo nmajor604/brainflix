@@ -9,7 +9,6 @@ function convertTimestamp(timestamp){
     return dateString;
 }
 
-
 function CommentsList (props) {
     console.log('propss', props)
     return (
@@ -30,5 +29,4 @@ function CommentsList (props) {
         );
     }
   
-
   export default CommentsList;

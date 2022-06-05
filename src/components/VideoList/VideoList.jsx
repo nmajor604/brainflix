@@ -28,6 +28,5 @@ function VideoList (props) {
         </div>
         );
     }
-  
 
   export default VideoList;

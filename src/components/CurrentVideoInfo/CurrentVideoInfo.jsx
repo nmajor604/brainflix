@@ -7,11 +7,9 @@ function CurrentVideoInfo(props) {
             <div className="video--title">
                 {props.title}
             </div>
-            
             <div className='video--description'>
                 {props.description}
             </div>
-             
           </>
       );
     }

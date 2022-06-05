@@ -21,7 +21,6 @@ function Header() {
                     <img className='header__avatar' src={avatar} alt='Mohan Muruge Avatar' />
                 </div>
             </div>
-            
             <div className='header__button'>
                 <div><img src={upload} alt='Video Upload Icon'/></div>
                 <div>UPLOAD</div>

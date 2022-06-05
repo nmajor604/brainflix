@@ -1,0 +1,70 @@
+  @font-face {
+    font-family: "Avenir Next Regular";
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  }
+  @font-face {
+    font-family: "Avenir Next Demi";
+    src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+  }
+  @font-face {
+    font-family: "Avenir Next Bold";
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+
+    
+  }/*# sourceMappingURL=fonts.css.map */
+
+    $regular: 'Avenir Next Regular'; 
+    $bold: 'Avenir Next Bold';
+    $demi: 'Avenir Next Demi';
+
+.upload {
+  padding: 8px;
+  margin: auto;
+  
+}
+
+.upload__preview {
+    width: 90vw;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.upload__title {
+    margin-top: 24px;
+    font-size: 36px;
+    font-family: $demi;
+    line-height: 44px;
+}
+
+.upload__subtitle {
+    font-family: $demi;
+    color: #AFAFAF;
+}
+
+.upload__input {
+  width: 90vw;
+  padding: 8px;
+  margin: auto;
+  border: solid 1px #AFAFAF;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+}
+
+.publish__button {
+  background-color: #0095FF;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: $demi;
+}
+
+.cancel__upload {
+  text-align: center;
+  font-family: $demi;
+  color: #0095FF;
+}

@@ -5,7 +5,6 @@ import VideoList from './VideoList/VideoList';
 import React from 'react';
 import axios from 'axios';
 
-
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -42,12 +41,11 @@ componentDidUpdate = (prevProps, prevState) => {
 }
 
   render () {
-console.log('this.state.data', this.state.data);
-let VideoComment = '';
-if (this.state.data.comments) {
-VideoComment =  <CommentsList comments={this.state.data.comments}/>
+    console.log('this.state.data', this.state.data);
+    let VideoComment = '';
+    if (this.state.data.comments) {
+    VideoComment =  <CommentsList comments={this.state.data.comments}/>
 }
-
 
       return (
         <>
@@ -62,5 +60,4 @@ VideoComment =  <CommentsList comments={this.state.data.comments}/>
       }
     }
   
-
   export default Main;

@@ -33,5 +33,4 @@ function CurrentVideoStats(props) {
       );
     }
   
-
   export default CurrentVideoStats;
