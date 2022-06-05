@@ -1,4 +1,4 @@
-// @import "fonts";
+@import url(/Users/nickm/Desktop/brainstation/nick-major-brainflix/src/components/_fonts.css);
 
 $regular: 'Avenir Next Regular'; 
 $bold: 'Avenir Next Bold';
@@ -10,6 +10,7 @@ $demi: 'Avenir Next Demi';
     flex-direction: column;
     align-items: center;
     width: auto;
+    border-bottom: solid 1px #e1e1e1;
     padding: 16px;
     margin-left: 16px;
     margin-right: 16px;

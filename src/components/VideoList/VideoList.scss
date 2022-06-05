@@ -26,11 +26,17 @@ $demi: 'Avenir Next Demi';
   padding: 16px;
 }
 
+.video--list {
+  list-style: none;
+
+}
+
 .videolist {
     display: flex;
     flex-direction: row;
     padding: 8px;
-  
+    text-decoration: none;
+
   }
 
 .video--thumbnail {
@@ -43,17 +49,19 @@ $demi: 'Avenir Next Demi';
 
 .videolist > div {
   padding: 8px;
+  
 }
 
 .video__info {
   padding: 8px;
-
   &--title {
     font-family: $demi;
+    color: #000;
   }
 
   &--channel {
     font-family: $regular;
+    color: #000;
   }
 
 }
