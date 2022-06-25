@@ -15,12 +15,12 @@ class Main extends React.Component {
 }
 
 componentDidMount() {
-axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b`)
+axios.get(`https://localhost:8080/videos`)
   .then(res => {
     this.setState({ videos: res.data });
   })
 
-    axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+    axios.get(`https://localhost:8080/videos/${this.props.match.params.id}`)
     .then(res => {
     const data = res.data;
     this.setState({ data: data });
@@ -29,7 +29,7 @@ axios.get(`https://project-2-api.herokuapp.com/videos?api_key=ee26bdf7-c0ea-4050
 
 componentDidUpdate = (prevProps, prevState) => {
   if (this.props.match.params.id !== prevProps.match.params.id) {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=ee26bdf7-c0ea-4050-8dde-c675af97ea7b/`)
+    axios.get(`https://localhost:8080/videos/${this.props.match.params.id}`)
     .then(res => {
     const data = res.data;
     this.setState({ data: data });

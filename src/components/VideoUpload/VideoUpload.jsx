@@ -9,13 +9,40 @@ function VideoUpload(props) {
         alert("Video Successfully Uploaded")
     }
     
+    addVideo = (e, title, description) => {
+    e.preventDefault();
+    axios({
+      url: 'http://localhost:8080/',
+      method: 'POST',
+      data: { title, description },
+      headers: { 'Content-Type': 'application/json' }
+    }).then((response) => {
+      this.setState({ videos: response.data });
+    });
+  };
+
+handleFormSubmit = (e) => {
+    const {
+      title: {
+        value: title,
+      },
+      decription: {
+        value: description,
+      }
+    } = e.target.elements;
+    this.addVideo(e, title, description);
+  }
+
     return (
         <>
             <div className='upload__title'>Upload Video</div>
             <div className='upload'>
                 <div className='upload__subtitle'>VIDEO THUMBNAIL</div>
                 <img className='upload__preview' src={previewPhoto} alt="Video Preview" />
-                <div className='upload__form'>
+                <div 
+                    className='upload__form'
+                    onSubmit={this.handleFormSubmit}
+                >
                     <div>
                         <label className='upload__subtitle'>TITLE YOUR VIDEO</label>
                         <input className='upload__input' type="text" id="title" name="title" placeholder="Add a title to your video"></input>
@@ -40,3 +67,4 @@ function VideoUpload(props) {
 };
 
 export default VideoUpload;
+
