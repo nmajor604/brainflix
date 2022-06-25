@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import previewPhoto from '../../assets/images/Upload-video-preview.jpg';
 import './VideoUpload.scss'
 import '../font-families.scss'
+import axios from 'axios';
 
 function VideoUpload(props) {
     const uploadAlert = function () {
         alert("Video Successfully Uploaded")
     }
     
-    addVideo = (e, title, description) => {
+  const addVideo = function (e, title, description) {
     e.preventDefault();
     axios({
       url: 'http://localhost:8080/',
@@ -21,7 +22,7 @@ function VideoUpload(props) {
     });
   };
 
-handleFormSubmit = (e) => {
+  const handleFormSubmit = function (e) {
     const {
       title: {
         value: title,
@@ -30,7 +31,7 @@ handleFormSubmit = (e) => {
         value: description,
       }
     } = e.target.elements;
-    this.addVideo(e, title, description);
+    addVideo(e, title, description);
   }
 
     return (
@@ -41,7 +42,7 @@ handleFormSubmit = (e) => {
                 <img className='upload__preview' src={previewPhoto} alt="Video Preview" />
                 <div 
                     className='upload__form'
-                    onSubmit={this.handleFormSubmit}
+                    onSubmit={handleFormSubmit}
                 >
                     <div>
                         <label className='upload__subtitle'>TITLE YOUR VIDEO</label>

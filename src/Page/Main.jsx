@@ -15,21 +15,22 @@ class Main extends React.Component {
 }
 
 componentDidMount() {
-axios.get(`https://localhost:8080/videos`)
-  .then(res => {
-    this.setState({ videos: res.data });
+axios.get(`http://localhost:8080/videos`)
+  .then(res => { console.log(res)
+    this.setState({ data: res.data });
+    console.log("State is ", this.state)
   })
 
-    axios.get(`https://localhost:8080/videos/${this.props.match.params.id}`)
+    axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
     .then(res => {
-    const data = res.data;
-    this.setState({ data: data });
+    console.log(res)
+    this.setState({ data: res.data });
   });
 }
 
 componentDidUpdate = (prevProps, prevState) => {
   if (this.props.match.params.id !== prevProps.match.params.id) {
-    axios.get(`https://localhost:8080/videos/${this.props.match.params.id}`)
+    axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
     .then(res => {
     const data = res.data;
     this.setState({ data: data });
@@ -38,6 +39,7 @@ componentDidUpdate = (prevProps, prevState) => {
 }
 
   render () {
+    console.log(this.state.data);
     let VideoComment = '';
     if (this.state.data.comments) {
     VideoComment =  <CommentsList comments={this.state.data.comments}/>
