@@ -1,25 +1,26 @@
 import publish from '../../assets/icons/publish.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import previewPhoto from '../../assets/images/Upload-video-preview.jpg';
 import './VideoUpload.scss'
 import '../font-families.scss'
 import axios from 'axios';
 
-function VideoUpload(props) {
-    const uploadAlert = function () {
-        alert("Video Successfully Uploaded")
-    }
+function VideoUpload() {
+    // const uploadAlert = function () {
+    //     alert("Video Successfully Uploaded")
+    // }
     
   const addVideo = function (e, title, description) {
     e.preventDefault();
+    console.log('axios called')
     axios({
-      url: 'http://localhost:8080/',
+      url: 'http://localhost:8080/videos/:id',
       method: 'POST',
       data: { title, description },
       headers: { 'Content-Type': 'application/json' }
     }).then((response) => {
       this.setState({ videos: response.data });
-    });
+    }).catch(console.error());
   };
 
   const handleFormSubmit = function (e) {
@@ -31,6 +32,7 @@ function VideoUpload(props) {
         value: description,
       }
     } = e.target.elements;
+    console.log('addVideo called')
     addVideo(e, title, description);
   }
 
@@ -43,6 +45,7 @@ function VideoUpload(props) {
                 <form 
                     className='upload__form'
                     onSubmit={handleFormSubmit}
+                    
                 >
                     <div>
                         <label className='upload__subtitle'>TITLE YOUR VIDEO</label>
@@ -52,16 +55,17 @@ function VideoUpload(props) {
                         <label className='upload__subtitle'>ADD A VIDEO DESCRIPTION</label>
                         <input className='upload__input--video' type="text" id="description" name='description' placeholder='Add a description to your video'></input>
                     </div>
+                    <div className='upload__footer'>
+                      {/* <Link to='/'> */}
+                              <div><img src={publish} alt='Video Publish Icon'/></div>
+                              <button className='publish__button' type='submit'>PUBLISH</button>
+                              <div></div>
+                      {/* </Link> */}
+                    <div className='cancel__upload'>CANCEL</div>
+                    </div>
                 </form>
             </div>
-            <div className='upload__footer'>
-                <Link to='/' className='publish__button' onClick={uploadAlert}>
-                        <div><img src={publish} alt='Video Publish Icon'/></div>
-                        <div>PUBLISH</div>
-                        <div></div>
-                </Link>
-                <div className='cancel__upload'>CANCEL</div>
-            </div>
+            
         </>
         
     )
