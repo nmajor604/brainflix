@@ -17,14 +17,16 @@ class Main extends React.Component {
 componentDidMount() {
 axios.get(`http://localhost:8080/videos`)
   .then(res => { console.log(res)
-    this.setState({ data: res.data });
+    this.setState({ videos: res.data });
     console.log("State is ", this.state)
-  })
-
-    axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
+    axios.get(`http://localhost:8080/videos/${res.data[0].id}`)
     .then(res => {
     console.log(res)
     this.setState({ data: res.data });
+    console.log("Res.data", res.data);
+  })
+
+    
   });
 }
 
@@ -50,7 +52,7 @@ componentDidUpdate = (prevProps, prevState) => {
           <CurrentVideo data={this.state.data}/>
           <CommentsForm />
           {VideoComment}
-          <VideoList videos={this.state.videos}
+          <VideoList videoList={this.state.videos}
           currentVideoId={this.state.data.id}/>
         </>
       );

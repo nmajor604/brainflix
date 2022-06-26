@@ -40,7 +40,7 @@ function VideoUpload(props) {
             <div className='upload'>
                 <div className='upload__subtitle'>VIDEO THUMBNAIL</div>
                 <img className='upload__preview' src={previewPhoto} alt="Video Preview" />
-                <div 
+                <form 
                     className='upload__form'
                     onSubmit={handleFormSubmit}
                 >
@@ -52,7 +52,7 @@ function VideoUpload(props) {
                         <label className='upload__subtitle'>ADD A VIDEO DESCRIPTION</label>
                         <input className='upload__input--video' type="text" id="description" name='description' placeholder='Add a description to your video'></input>
                     </div>
-                </div>
+                </form>
             </div>
             <div className='upload__footer'>
                 <Link to='/' className='publish__button' onClick={uploadAlert}>

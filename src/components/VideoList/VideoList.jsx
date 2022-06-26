@@ -6,7 +6,7 @@ function VideoList (props) {
         <div>
             <div className='videolist__header'>NEXT VIDEOS</div>
             <ul className="videolist">
-            {props.videos.filter((current) => props.currentVideoId !== current.id).map((videos) => <li  key={videos.id}>
+            {props.videoList.filter((current) => props.currentVideoId !== current.id).map((videos) => <li  key={videos.id}>
                 <Link to={`/videos/${videos.id}`} className="videolist--container" >
                  <img 
                     className="video--thumbnail"
