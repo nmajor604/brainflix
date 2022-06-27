@@ -43,6 +43,7 @@ componentDidUpdate = (prevProps, prevState) => {
   render () {
     console.log(this.state.data);
     let VideoComment = '';
+    
     if (this.state.data.comments) {
     VideoComment =  <CommentsList comments={this.state.data.comments}/>
 }
