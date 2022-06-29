@@ -12,7 +12,7 @@ class App extends React.Component {
         <Header />
 
           <Switch>
-            <Route path='/' exact component={Main} />
+            <Route path='/videos' exact component={Main} />
             <Route path='/upload' component={VideoUpload} />
             <Route path='/videos/:id' component={Main} />
           </Switch>
