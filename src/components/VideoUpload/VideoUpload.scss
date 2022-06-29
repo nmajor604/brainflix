@@ -1,0 +1,112 @@
+  @font-face {
+    font-family: "Avenir Next Regular";
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  }
+  @font-face {
+    font-family: "Avenir Next Demi";
+    src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+  }
+  @font-face {
+    font-family: "Avenir Next Bold";
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+  }
+
+  // @import url(/Users/nickm/Desktop/brainstation/nick-major-brainflix/src/components/_fonts.css);
+
+
+  $regular: 'Avenir Next Regular'; 
+  $bold: 'Avenir Next Bold';
+  $demi: 'Avenir Next Demi';
+
+.upload {
+  padding: 8px;
+  margin: auto;
+    
+    &__preview {
+      width: 90vw;
+      margin: auto;
+      border-radius: 4px;
+    }
+
+    &__title {
+      margin-top: 24px;
+      margin-bottom: 36px;
+      font-size: 36px;
+      font-family: $demi;
+      line-height: 44px;
+    }
+
+    &__subtitle {
+      font-family: $demi;
+      color: #AFAFAF;
+    }
+
+    &__form > div {
+      padding: 16px 0 16px 0;
+    }
+
+    &__input {
+      width: 85vw;
+      padding: 8px;
+      margin: auto;
+      border: solid 1px #AFAFAF;
+      border-radius: 4px;
+      background-color: #FAFAFA;
+    }
+
+    &__input--video {
+      width: 85vw;
+      height: 75px;
+      padding: 8px;
+      margin: auto;
+      border: solid 1px #AFAFAF;
+      border-radius: 4px;
+      background-color: #FAFAFA;
+    }
+}
+
+.upload > div {
+  margin-bottom: 16px;
+}
+
+.publish__button {
+  background-color: #0095FF;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: $demi;
+  text-decoration: none;
+}
+
+.cancel__upload {
+  padding: 16px;
+  text-align: center;
+  font-family: $demi;
+  color: #0095FF;
+}
+
+@media only screen and (min-width: 768px) {
+  .upload__preview {
+    width: 50vw;
+  }
+
+  .upload {
+    border-top: solid 1px #e1e1e1;
+    border-bottom: solid 1px #e1e1e1;
+  }
+
+  .upload__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 8px;
+  }
+
+  .publish__button {
+    width: 25vw;
+  }
+}
