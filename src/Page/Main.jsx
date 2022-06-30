@@ -15,9 +15,10 @@ class Main extends React.Component {
 }
 
 componentDidMount() {
+  console.log('component did mount called');
 axios.get(`http://localhost:8080/videos`)
-  .then(res => { console.log(res)
-    this.setState({ videos: res.data });
+  .then(res => { console.log(res.data)
+    this.setState({ videos: res.data.videos });
     console.log("State is ", this.state)
     axios.get(`http://localhost:8080/videos/${res.data[0].id}`)
     .then(res => {
