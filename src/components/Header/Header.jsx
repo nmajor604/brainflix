@@ -9,7 +9,7 @@ function Header() {
     return (
         <div className='header'>
             <div>
-            <Link to="/"><img className='header__logo' src={logo} alt="Brainflix Logo"/>
+            <Link to="/videos"><img className='header__logo' src={logo} alt="Brainflix Logo"/>
             </Link>
             </div>
             <div className='header__searchbar'>
