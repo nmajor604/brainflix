@@ -1,5 +1,5 @@
 import publish from '../../assets/icons/publish.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import previewPhoto from '../../assets/images/Upload-video-preview.jpg';
 import './VideoUpload.scss'
 import '../font-families.scss'
@@ -45,6 +45,8 @@ function VideoUpload() {
                 <form 
                     className='upload__form'
                     onSubmit={handleFormSubmit}
+                    action="http://localhost:8080/index.js"
+                    method='POST'
                     
                 >
                     <div>
@@ -56,11 +58,11 @@ function VideoUpload() {
                         <input className='upload__input--video' type="text" id="description" name='description' placeholder='Add a description to your video'></input>
                     </div>
                     <div className='upload__footer'>
-                      <Link to='/'>
+                      {/* <Link to='/'> */}
                               <div><img src={publish} alt='Video Publish Icon'/></div>
                               <button className='publish__button' type='submit'>PUBLISH</button>
                               <div></div>
-                      </Link>
+                      {/* </Link> */}
                     <div className='cancel__upload'>CANCEL</div>
                     </div>
                 </form>
