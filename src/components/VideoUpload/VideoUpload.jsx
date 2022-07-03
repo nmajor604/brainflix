@@ -19,7 +19,7 @@ function VideoUpload() {
       data: { title, description },
       headers: { 'Content-Type': 'application/json' }
     }).then((response) => {
-      // this.setState({ videos: response.data });
+      this.setState({ videos: response.data });
     }).catch(console.error());
   };
 
@@ -45,8 +45,8 @@ function VideoUpload() {
                 <form 
                     className='upload__form'
                     onSubmit={handleFormSubmit}
-                    action="http://localhost:8080/index.js"
-                    method='POST'
+                    action="http://localhost:8080/videos.js"
+                    method='post'
                     
                 >
                     <div>
@@ -58,7 +58,7 @@ function VideoUpload() {
                         <input className='upload__input--video' type="text" id="description" name='description' placeholder='Add a description to your video'></input>
                     </div>
                     <div className='upload__footer'>
-                      {/* <Link to='/'> */}
+                      {/* <Link to='/videos'> */}
                               <div><img src={publish} alt='Video Publish Icon'/></div>
                               <button className='publish__button' type='submit'>PUBLISH</button>
                               <div></div>
